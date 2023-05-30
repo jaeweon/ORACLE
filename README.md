@@ -73,10 +73,32 @@ Test Connection 클릭 > Connected 성공
 
 # RDBMS(관계형 데이터베이스 시스템)
    테이블끼리 서로 관계를 맺을 수 있다.
-
-
-# 이러한 구조를 가지는 것을 Table, Relation(오라클), Class라고 부른다.
-
+   
+# SQL문(쿼리문)
+- DDL, DMl, DCL, TCL
+  스크립트 언어
+  DBMS와 소통하는 언어
+  - DDL(Data Definition Language) : 데이터 정의어
+    1. CREATE : 테이블 생성
+    	CREATE TABLE [테이블 명] (
+	   [컬러명] [자료형(용량)] [제약조건]
+	   ...
+	);
+    2. DROP : 테이블 삭제
+    	DROP TABLE [테이블 명];
+    3. ALTER : 테이블 수정
+    	    - 테이블 명 수정 : RENAME TO [새로운 테이블 명]
+    	    - 컬럼 추가 : ADD ([새로운 컬럼명] [자료형(용량)])
+     	    - 컬러명 변경 : RENAME COLUMN [기존 컬러명] TO [새로운 컬럼명]
+    	    - 컬럼 삭제 : DROP COLUMN [기존 컬러명]
+    	    - 컬럼 수정 : MODIFY ([기존 컬러명] [자료형(용량)])
+    4. TRUNCATE : 테이블 내용 
+	TRUNCATE TABLE [테이블 명];
+	
+	
+### 자료형(TYPE)
+	
+	
 # COLUMN(열, 속성, 필드)
 	공통된 값들의 주제
 
