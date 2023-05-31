@@ -1,7 +1,8 @@
 ### ORACLE
 
+##
 ![image](https://github.com/jaeweon/ORACLE/assets/34277606/9e645d15-c82c-44a7-82fe-2dced5a9acd9)
-![image](https://github.com/jaeweon/ORACLE/assets/34277606/4ed4b1fd-5398-4f0b-8860-6150ab488e12)
+![image](https://github.com/jaeweon/ORACLE/assets/34277606/fc6827da-23e7-419b-b37b-e322aea3e066)
 
 
 
@@ -69,17 +70,6 @@ https://drive.google.com/file/d/1rM1Z7-mA6vjySBgwWLr3ZI883xiL27HN/view?usp=shari
      Database: XE
      username: hr
      password: hr
-
-# Driver 연결
-   Edit Driver Settings 클릭
-   > Libraries 탭 클릭
-   > 기존에 있는 라이브러리 전체 삭제
-   > Add File
-   > C:/oraclexe/app/oracle/product/11.2.0/server/jdbc/lib/ojdbc6.jar 추가
-   > 확인
-
-Test Connection 클릭 > Connected 성공
-
 
 # RDBMS(관계형 데이터베이스 시스템)
    테이블끼리 서로 관계를 맺을 수 있다.
