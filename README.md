@@ -1,5 +1,26 @@
 ### ORACLE
 
+![image](https://github.com/jaeweon/ORACLE/assets/34277606/9e645d15-c82c-44a7-82fe-2dced5a9acd9)
+![image](https://github.com/jaeweon/ORACLE/assets/34277606/4ed4b1fd-5398-4f0b-8860-6150ab488e12)
+
+
+
+# SELECT
+ SELECT [컬럼명1, 컬럼명2,... ] FROM [테이블명];
+
+
+# INSERT
+  INSERT INTO [테이블명]
+  VALUES('data1', 2000, 'data2');
+
+# UPDATE
+  UPDATE [테이블명]
+  SET [기존컬럼명1] = [새로운 값], [기존컬럼명2] = [새로운값];
+
+# DELETE
+  DELETE FROM [테이블명]
+  
+  
 ## DB(Database)
    데이터가 모여 있는 기지
    추상적인 용어
@@ -39,17 +60,6 @@ https://drive.google.com/file/d/1rM1Z7-mA6vjySBgwWLr3ZI883xiL27HN/view?usp=shari
    SQL> show user
    USER is "HR"
 
-IDE 설치 - DBeaver
-   https://dbeaver.io/download/
-   > Windows (zip) 클릭 - 무설치 버전
-   > 압축 해제 후 DBeaver.exe 실행
-   > Sample Database는 만들지 않는다.
-
-# Project 생성
-   좌측 상단에 Project 탭 클릭
-   > New Project 버튼 클릭(+모양)
-   > 생성된 Project 우클릭
-   > Set Active Project 클릭
 
 # Connections 연동
    Project 안에 있는 Connections 우클릭
@@ -111,53 +121,6 @@ Test Connection 클릭 > Connected 성공
 	중복이 없고 NULL값을 허용하지 않는다.
 	*NULL : 아직 어떤 값을 넣을 지 모르겠다는 의미로 넣는 값.
 
-
-1. 요구사항 분석
-   꽃 테이블과 화분 테이블 2개가 필요하고,
-   꽃을 구매할 때 화분도 같이 구매합니다.
-   꽃은 이름과 색상, 가격이 있고,
-   화분은 제품번호, 색상, 모양이 있습니다.
-   화분은 모든 꽃을 담을 수 없고 맞는 꽃들을 담아야 합니다.
-
-2. 개념적 설계
-   꽃   화분
-   -----------
-   이름   제품번호
-   색상   색상
-   가격   모양
-      이름
-      색상
-
-3. 논리적 설계
-   꽃   화분
-   ---------------
-   이름P   제품번호P
-   색상P   
-   ---------------
-   가격   색상
-      모양
-      이름F
-      색상F
-
-4. 물리적 설계
-   FLOWER
-   -------------------------------------------
-   FLOWER_NAME : VARCHAR2(1000) : PRIMARY KEY
-   FLOWER_COLOR : VARCHAR2(1000) : PRIMARY KEY
-   -------------------------------------------
-   FLOWER_PRICE : NUMBER
-
-
-   POT
-   -------------------------------------------
-   POT_NUMBER : NUMBER : PRIMARY KEY
-   -------------------------------------------
-   POT_COLOR : VARCHAR2(1000)
-   POT_SHAPE : VARCHAR2(1000)
-   FLOWER_NAME : VARCHAR2(1000) : FOREIGN KEY
-   FLOWER_COLOR : VARCHAR2(1000) : FOREIGN KEY
-   
-5. 구현
 ------------------------------------------------------------------------
  - DML(Data Manipulation Language) : 데이터 조작어
    1. SELECT : 조회(검색)
