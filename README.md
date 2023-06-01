@@ -5,7 +5,6 @@
 ![image](https://github.com/jaeweon/ORACLE/assets/34277606/fc6827da-23e7-419b-b37b-e322aea3e066)
 
 
-
 # SELECT
  SELECT [컬럼명1, 컬럼명2,... ] FROM [테이블명];
 
@@ -30,16 +29,6 @@
    DB를 관리할 수 있는 구체적인 시스템
    오라클, 마리아DB, MySQL, MS-SQL, MongoDB, ...
 
-# 오라클 DBMS 버전
-   i : internet
-   g : grid
-   c : cloud
-
-# 오라클 DBMS 설치 - 11G
-https://drive.google.com/file/d/1rM1Z7-mA6vjySBgwWLr3ZI883xiL27HN/view?usp=sharing
-
-# 압축 해제 > DISK1/setup.exe 실행 > Next > I Agree.. 체크 > Next > Next > 비밀번호 1234
-> Next > 정보 확인 후 Install > Finish
 
 # 계정
    sys : 모든 권한
@@ -148,35 +137,3 @@ https://drive.google.com/file/d/1rM1Z7-mA6vjySBgwWLr3ZI883xiL27HN/view?usp=shari
 
 ※ 위 연산자들은 WHERE절에서 사용가능하다.
 ------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
