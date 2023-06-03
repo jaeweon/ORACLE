@@ -138,6 +138,22 @@
 ※ 위 연산자들은 WHERE절에서 사용가능하다.
 ------------------------------------------------------------------------
 
+![alias](https://github.com/jaeweon/ORACLE/assets/34277606/8098848a-bbf4-4e0f-bb91-e20a99f472fd)
+
+
+![groupby](https://github.com/jaeweon/ORACLE/assets/34277606/08e36ea4-53e6-4c86-a5f1-46572facc1e5)
+
+
+
+
+
+
+
+
+
+
+
+
 
 # 동적 쿼리
 사용방법
