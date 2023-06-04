@@ -148,13 +148,6 @@
 
 
 
-
-
-
-
-
-
-
 # 동적 쿼리
 사용방법
 실행 중 변경 가능한 문자열 변수 또는 문자열 상수로 제공된 SQL문을 실행
@@ -174,3 +167,34 @@ DML과 TCL외에도 DDL, DCL을 사용할 수 있다.
 사용 이유
 SQL이 몇 개 문장으로 고정될 수 없을 때
 SQL이 실행될지 예측할 수 없는 경우
+
+오라클에서 서브쿼리는 하나의 SQL 문 안에 포함된 또 다른 SQL 문이다. 주로 외부 쿼리의 결과를 사용하여 내부 쿼리에서 데이터를 필터링하거나 계산하는 데 사용된다. 서브쿼리는 SELECT, INSERT, UPDATE, DELETE 문에서 사용할 수 있다.
+
+서브쿼리는 괄호로 둘러싸여 있으며, 주로 FROM 절, WHERE 절, HAVING 절, SELECT 절의 일부로 사용된다. 서브쿼리의 결과는 외부 쿼리에 의해 참조되어 처리된다.
+
+1. FROM절에서의 서브쿼리 사용 예시 :
+
+SELECT employee_name, department_name
+FROM employees
+WHERE department_id IN (SELECT department_id FROM departments WHERE location_id = 1700);
+
+위의 쿼리에서 서브쿼리는 "departments" 테이블에서 location_id가 1700인 부서의 department_id를 선택한다. 이 서브쿼리의 결과는 외부 쿼리의 IN 절에서 사용되어 해당 부서에 속한 직원들을 조회한다.
+
+2. WHERE 절에서의 서브쿼리 사용 예시:
+
+SELECT employee_name
+FROM employees
+WHERE salary > (SELECT AVG(salary) FROM employees);
+
+위의 쿼리에서 서브쿼리는 "employees" 테이블에서 평균 급여를 계산하여 외부 쿼리의 WHERE 절에서 salary와 비교한다. 이 서브쿼리의 결과는 외부 쿼리에서 조건을 충족하는 직원들의 이름을 반환한다.
+
+3. SELECT 절에서의 서브쿼리 사용 예시 :
+
+SELECT department_name, (SELECT COUNT(*) FROM employees WHERE departments.department_id = employees.department_id) AS employee_count
+FROM departments;
+
+위의 쿼리에서 서브쿼리는 "employees" 테이블에서 각 부서의 직원 수를 계산하여 외부 쿼리의 SELECT 절에서 employee_count라는 별칭으로 사용된다. 이 서브쿼리의 결과는 각 부서와 해당 부서의 직원 수를 조회한다.
+
+이렇듯 서브쿼리는 복잡한 데이터 필터링이나 계산에 유용하게 사용되며, 주로 외부 쿼리의 조건에 의존적인 결과를 얻기 위해 활용된다.
+
+
